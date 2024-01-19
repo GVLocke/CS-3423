@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <title>Home</title>
+    <head></head>
+    <body>
+        <center>
+            <h1>Welcome!</h1>
+            <h2>Enter some details about yourself.</h2>
+            <form>
+                <table border="1">
+                    <tr>
+                        <td>First Name</td> 
+                        <td><input type="text" name="FirstName" id="FirstName"></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td> 
+                        <td><input type="text" name="LastName" id="LastName"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>
+                            <input type="radio" name="Gender" id="Gender" value="male"> Male <br>
+                            <input type="radio" name="Gender" id="Gender" value="female"> Female <br>
+                            <input type="radio" name="Gender" id="Gender" value="prefer-not-to-say"> Prefer Not to Say <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Date of Birth</td>
+                        <td>
+                            <input type="date" name="date" id="date">
+                        </td>
+                    </tr>
+                    <tr>
+                            <td>Education Level</td>
+                            <td>
+                                <select name="EducationLevel" id="EducationLevel">
+                                    <option value="null">Select Highest Education Level</option>
+                                    <option value="HighSchool">High School</option>
+                                    <option value="Undergraduate">Undergraduate</option>
+                                    <option value="Masters">Masters</option>
+                                    <option value="PhD">PhD</option>
+                                </select>
+                            </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Skillset</td>
+                        <td>
+                            <select name="Skillset" id="Skillset">
+                                <option value="null">Select a Skill</option>
+                                <option value="C">C</option>
+                                <option value="C++">C++</option>
+                                <option value="Java">Java</option>
+                                <option value="Python">Python</option>
+                                <option value="PHP">PHP</option>
+                                <option value="JavaScript">JavaScript</option>
+                                <option value="HTML">HTML</option>
+                                <option value="CSS">CSS</option>
+                                <option value="SQL">SQL</option>
+                                <option value="NoSQL">NoSQL</option>
+                                <option value="MongoDB">MongoDB</option>
+                                <option value="MySQL">MySQL</option>
+                                <option value="Oracle">Oracle</option>
+                                <option value="PostgreSQL">PostgreSQL</option>
+                                <option value="SQLite">SQLite</option>
+                                <option value="MariaDB">MariaDB</option>
+                                <option value="Git">Git</option>
+                                <option value="GitHub">GitHub</option>
+                                <option value="GitLab">GitLab</option>
+                                <option value="BitBucket">BitBucket</option>
+                                <option value="Jira">Jira</option>
+                                <option value="Confluence">Confluence</option>
+                                <option value="Jenkins">Jenkins</option>
+                                <option value="Docker">Docker</option>
+                                <option value="Kubernetes">Kubernetes</option>
+                                <option value="AWS">AWS</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <input type="reset" name="reset" id="reset" value="Reset">
+            </form>
+            <br>
+            <a href="quiz.html"><button>Next</button></a>
+        </center>
+    </body>
+</html>
