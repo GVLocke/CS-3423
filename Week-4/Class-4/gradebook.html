@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <title>Gradebook</title>
+    <head></head>
+    <body>
+        <head>
+            <script>
+                function calculateGrades(student, lab1, lab2, lab3, quiz1) {
+                    // prevents the form from submitting
+                    event.preventDefault();
+                    var average = (parseInt(lab1) + parseInt(lab2) + parseInt(lab3) + parseInt(quiz1)) / 4;
+                    document.getElementById(student).value = average.toFixed(2);
+                }
+            </script>
+        </head>
+    <center>
+        <h1>Gradebook</h1>
+        <form>
+            <table>
+                <tr><td></td> <td>Paul</td> <td>Duncan</td><td>Stilgar</td></tr>
+                <tr>
+                    <td>Lab-1</td>
+                    <td><input type="text" name="s1lab1" id="s1lab1" /></td>
+                    <td><input type="text" name="s2lab1" id="s2lab1" /></td>
+                    <td><input type="text" name="s3lab1" id="s3lab1" /></td>
+                </tr>
+                <tr>
+                    <td>Lab-2</td>
+                    <td><input type="text" name="s1lab2" id="s1lab2" /></td>
+                    <td><input type="text" name="s2lab2" id="s2lab2" /></td>
+                    <td><input type="text" name="s3lab2" id="s3lab2" /></td>
+                </tr>
+                <tr>
+                    <td>Lab-3</td>
+                    <td><input type="text" name="s1lab3" id="s1lab3" /></td>
+                    <td><input type="text" name="s2lab3" id="s2lab3" /></td>
+                    <td><input type="text" name="s3lab3" id="s3lab3" /></td>
+                </tr>
+                <tr>
+                    <td>Quiz-1</td>
+                    <td><input type="text" name="s1quiz1" id="s1quiz1" /></td>
+                    <td><input type="text" name="s2quiz1" id="s2quiz1" /></td>
+                    <td><input type="text" name="s3quiz1" id="s3quiz1" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button style="width: 150px;" onclick="calculateGrades('s1avg', document.getElementById('s1lab1').value, document.getElementById('s1lab2').value, document.getElementById('s1lab3').value, document.getElementById('s1quiz1').value)">Calculate Average</button></td>
+                    <td><button style="width: 150px;" onclick="calculateGrades('s2avg', document.getElementById('s2lab1').value, document.getElementById('s2lab2').value, document.getElementById('s2lab3').value, document.getElementById('s2quiz1').value)">Calculate Average</button></td>
+                    <td><button style="width: 150px;" onclick="calculateGrades('s3avg', document.getElementById('s3lab1').value, document.getElementById('s3lab2').value, document.getElementById('s3lab3').value, document.getElementById('s3quiz1').value)">Calculate Average</button></td>
+                </tr>
+                <tr>
+                    <td>Average</td>
+                    <td><input type="text" name="s1avg" id="s1avg"></td>
+                    <td><input type="text" name="s2avg" id="s2avg"></td>
+                    <td><input type="text" name="s3avg" id="s3avg"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="grades" id="grades" value="Submit"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+    </body>
+</html>
