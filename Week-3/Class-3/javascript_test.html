@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function myfunction(){
+            alert(document.getElementById("name").value)
+            // document.getElementById("test") += document.getElementById("name").value // something's not working here
+        }
+    </script>
+    <title>JavaScript Test</title>
+    <body>
+        <center>
+            <input type="text" name="name" id="name" placeholder="Enter Text Here">
+            <input type="button" value="Click Here" name="submit_btn" id="submit_btn" onclick="javascript:myfunction()">
+            <h1 id="test"></h1>
+        </center>
+    </body>
+</html>
