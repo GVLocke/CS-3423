@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <title>Word Forming Game</title>
+    <head>
+        <script>
+            all_words = "";
+            // obviously this isn't an exhaustive list, this is just to demonstrate the functionality. 
+            // there's probably an API for this, anyway
+            legal_words = [
+                "COME",
+                "FORT",
+                "TABLE",
+                "MOM",
+                "COMFORT",
+                "BOOT",
+                "RAT",
+                "ROOM",
+                "BLEAT",
+                "TAB",
+                "FOR",
+                "OR",
+                "BAT",
+                "FART",
+                "ACE",
+                "TOO",
+                "ACT"
+                // ... 
+            ];
+            function addLetter(l) {
+                all_words += l;
+            }
+
+            function displayWord() {
+                last_word = "";
+                for (var i = all_words.length - 1; i >= 0; i--) {
+                    if (all_words[i] == ">") {
+                        break;
+                    }
+                    last_word += all_words[i];
+                }
+                last_word = reverse_word(last_word);
+                if (legal_words.includes(last_word)) {
+                    document.getElementById("output").innerHTML += last_word + "<br>";
+                    all_words += "<br>";
+                }
+                else {
+                    alert(last_word + " is not a legal word!")
+                    all_words += "<br>";
+                }
+            }
+
+            function reverse_word(word) {
+                return word.split("").reverse().join("");
+            }
+        </script>
+    </head>   
+    <body>
+        <center>
+            <h1>Word Forming Game</h1>
+            <h2>Click letters to form a new word</h2>
+                <tr>
+                    <td><button value="C" onclick="addLetter('C')">C</button></td>
+                    <td><button value="O" onclick="addLetter('O')">O</button></td>
+                    <td><button value="M" onclick="addLetter('M')">M</button></td>
+                    <td><button value="F" onclick="addLetter('F')">F</button></td>
+                    <td><button value="O" onclick="addLetter('O')">O</button></td>
+                    <td><button value="R" onclick="addLetter('R')">R</button></td>
+                    <td><button value="T" onclick="addLetter('T')">T</button></td>
+                    <td><button value="A" onclick="addLetter('A')">A</button></td>
+                    <td><button value="B" onclick="addLetter('B')">B</button></td>
+                    <td><button value="L" onclick="addLetter('L')">L</button></td>
+                    <td><button value="E" onclick="addLetter('E')">E</button></td>
+                </tr> <br> <br> <br>
+            <button onclick="displayWord()">Click here to form a new word</button> <br> <br>
+            <label id="output"></label>
+        </center>
+    </body>
+</html>
