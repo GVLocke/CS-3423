@@ -55,11 +55,14 @@ li .menu-item
 .cart {
     display: none;
     background-color: #D5D7DD;
+    border-radius: 10px;
+    padding: 12px 16px;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 130px;
 }
 
-.cart ul {
-    display: inline;
-}
 
 .menu-content a:hover {
     background-color: #D2EAF9;

@@ -3,6 +3,7 @@
 	<head> 
 		<title>JBU Online Store</title>
 		<link rel="stylesheet" href="css/styles.css">
+		<script src="https://kit.fontawesome.com/bfea39c817.js" crossorigin="anonymous"></script> <!-- So I can use the cart icon-->
 		<script>
 			function popupfunction(x)
 			{
@@ -15,20 +16,17 @@
 				document.getElementById('fade'+x).style.display='none';
 			}	
 			function addToCart(itemNameString) {
-				document.getElementById('cart').innerHTML += itemNameString + "<br>"; 	
+				document.getElementById('cart-section').innerHTML += itemNameString + "<br>"; 	
 			}
 			function showcart() {
-				document.getElementById('cart-section').style.display='block';
+				document.getElementById('cart-section').style.display='block';	
 			}
 		</script>
 	</head>
 	<body bgcolor="#ffffff">
 		<br><br><br>
 	<h1 align="center">JBU Online Store</h1>
-	<div class="cart" id="cart-section"> 
-		<ul id="cart">
-		</ul>
-	</div>
+	<div class="cart" id="cart-section"></div>
 	<ul>
 		<div id="DropDowns">
 		<li class="menu-item"><a href="#" class="drp">Apparrel</a>
@@ -40,7 +38,6 @@
 			</div>
 		
 		</li>
-		
 		<li class="menu-item"><a href="#" class="drp">Books </a>
 		<div class="menu-content">
 			<a  href="new_books.html">New Releases</a><br>
@@ -58,7 +55,7 @@
 		</li>
 		</div>
 		<div align="right">
-			<a class="cart-icon" align="right" href="javascript:void(0)" onclick="showcart()">Test</a>
+			<a class="cart-icon" align="right" href="javascript:void(0)" onclick="showcart()"><i class="fa-solid fa-cart-shopping fa-xl"></i><!-- Represents a cart icon --></a>
 		</div>
 	</ul>
 	<table align="center" class="merch-table">
