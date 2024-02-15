@@ -46,6 +46,21 @@ li .menu-item
     display: block;
 }
 
+.cart-icon {
+    display: inline-block;
+    color: black;
+    padding: 15px 20px;
+}
+
+.cart {
+    display: none;
+    background-color: #D5D7DD;
+}
+
+.cart ul {
+    display: inline;
+}
+
 .menu-content a:hover {
     background-color: #D2EAF9;
     color: #1C9DDB;

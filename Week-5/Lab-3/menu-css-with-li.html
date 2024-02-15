@@ -14,15 +14,23 @@
 				document.getElementById('popup'+x).style.display='none';
 				document.getElementById('fade'+x).style.display='none';
 			}	
+			function addToCart(itemNameString) {
+				document.getElementById('cart').innerHTML += itemNameString + "<br>"; 	
+			}
+			function showcart() {
+				document.getElementById('cart-section').style.display='block';
+			}
 		</script>
 	</head>
 	<body bgcolor="#ffffff">
 		<br><br><br>
-	<center>
-		<!-- <img src="img/tux2.png" alt="Image of Tux, the Pengiun Mascot of Linux" width="10%"> -->
-	</center>
 	<h1 align="center">JBU Online Store</h1>
+	<div class="cart" id="cart-section"> 
+		<ul id="cart">
+		</ul>
+	</div>
 	<ul>
+		<div id="DropDowns">
 		<li class="menu-item"><a href="#" class="drp">Apparrel</a>
 			<div class="menu-content">
 				<a  href="shirts.html">Tees</a><br>
@@ -48,12 +56,17 @@
 			<a href="our_mission.html">Our Mission</a><br>
 		</div>
 		</li>
+		</div>
+		<div align="right">
+			<a class="cart-icon" align="right" href="javascript:void(0)" onclick="showcart()">Test</a>
+		</div>
 	</ul>
 	<table align="center" class="merch-table">
 		<tr>
 			<td align="center">
 				<a href="javascript:void(0)" onclick="popupfunction('1')" class="linktext">
 				<img src="img/blueshirt3.png" alt="A blue shirt" width="400px"><br>Blue Shirt</a>
+				<br> <br> <button onclick="addToCart('Blue Shirt')">Add to Cart</button>
 			</td>
 				<div id="popup1" class="white_content">
 					<p align="center">
@@ -65,6 +78,7 @@
 			<td align="center">
 				<a href="javascript:void(0)" onclick="popupfunction('2')" class="linktext">
 				<img src="img/blueshirt3.png" alt="A blue shirt" width="400px"><br>Another Blue Shirt</a>
+				<br> <br> <button onclick="addToCart('Another Blue Shirt')">Add to Cart</button>
 			</td>
 				<div id="popup2" class="white_content">
 					<p align="center">
@@ -76,6 +90,7 @@
 			<td align="center">
 				<a href="javascript:void(0)" onclick="popupfunction('3')" class="linktext">
 				<img src="img/cardboardbox.jpg" alt="A blue shirt" width="400px"><br>A Cardboard Box</a>
+				<br> <br> <button onclick="addToCart('A Cardboard Box')">Add to Cart</button>
 			</td>
 				<div id="popup3" class="white_content">
 					<p align="center">
@@ -89,6 +104,7 @@
 			<td align="center">
 				<a href="javascript:void(0)" onclick="popupfunction('4')" class="linktext">
 				<img src="img/rugpull.jpeg" alt="Totally Legit Crypto Opportunity" width="400px"><br>Totally Legit Crytpo Opportunity</a>
+				<br> <br> <button onclick="addToCart('Crytop Opportunity')">Add to Cart</button>
 			</td>
 				<div id="popup4" class="white_content">
 					<p align="center">
