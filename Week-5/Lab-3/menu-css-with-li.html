@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>JBU Online Store</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<script>
+			function popupfunction(x)
+			{
+				document.getElementById('popup'+x).style.display='block';
+				document.getElementById('fade'+x).style.display='block';
+			}
+			function popupclose(x)
+			{
+				document.getElementById('popup'+x).style.display='none';
+				document.getElementById('fade'+x).style.display='none';
+			}	
+		</script>
+	</head>
+	<body bgcolor="#ffffff">
+		<br><br><br>
+	<center>
+		<!-- <img src="img/tux2.png" alt="Image of Tux, the Pengiun Mascot of Linux" width="10%"> -->
+	</center>
+	<h1 align="center">JBU Online Store</h1>
+	<ul>
+		<li class="menu-item"><a href="#" class="drp">Apparrel</a>
+			<div class="menu-content">
+				<a  href="shirts.html">Tees</a><br>
+				<a  href="hats.html">Hats</a><br>
+				<a  href="crewnecks.html">Crewnecks</a><br>
+				<a href="accessories.html">Accessories</a><br>
+			</div>
+		
+		</li>
+		
+		<li class="menu-item"><a href="#" class="drp">Books </a>
+		<div class="menu-content">
+			<a  href="new_books.html">New Releases</a><br>
+			<a  href="best_sellers.html">Best Sellers</a><br>
+			<a href="genres.html">Genres</a><br>
+		</div>
+		
+		</li>
+		
+		<li class="menu-item"><a href="#" class="drp">About</a>	
+		<div class="menu-content">
+			<a href="about_us.html">About Us</a><br>
+			<a href="our_mission.html">Our Mission</a><br>
+		</div>
+		</li>
+	</ul>
+	<table align="center" class="merch-table">
+		<tr>
+			<td align="center">
+				<a href="javascript:void(0)" onclick="popupfunction('1')" class="linktext">
+				<img src="img/blueshirt3.png" alt="A blue shirt" width="400px"><br>Blue Shirt</a>
+			</td>
+				<div id="popup1" class="white_content">
+					<p align="center">
+						<br><br><img src="img/blueshirt3.png" alt="a blue shirt" width=30%><br>Blue Shirt <br><br>Price: $1000 <br>Rating: 5 <br>
+						<a href="javascript:void(0)" onclick="popupclose('1')" class="linktext">Back</a>
+					</p>
+				</div>
+				<div id="fade1" class="black_content"></div>
+			<td align="center">
+				<a href="javascript:void(0)" onclick="popupfunction('2')" class="linktext">
+				<img src="img/blueshirt3.png" alt="A blue shirt" width="400px"><br>Another Blue Shirt</a>
+			</td>
+				<div id="popup2" class="white_content">
+					<p align="center">
+						<br><br><img src="img/blueshirt3.png" alt="a blue shirt" width=30%><br>Another Blue Shirt <br><br>Price: $1000 <br>Rating: 5 <br>
+						<a href="javascript:void(0)" onclick="popupclose('2')" class="linktext">Back</a>
+					</p>
+				</div>
+				<div id="fade2" class="black_content"></div>
+			<td align="center">
+				<a href="javascript:void(0)" onclick="popupfunction('3')" class="linktext">
+				<img src="img/cardboardbox.jpg" alt="A blue shirt" width="400px"><br>A Cardboard Box</a>
+			</td>
+				<div id="popup3" class="white_content">
+					<p align="center">
+						<br><br><img src="img/cardboardbox.jpg" alt="a blue shirt" width=30%><br>A Cardboard Box<br><br>Price: $999 <br>Rating: 5 <br>
+						<a href="javascript:void(0)" onclick="popupclose('3')" class="linktext">Back</a>
+					</p>
+				</div>
+				<div id="fade3" class="black_content"></div>
+		</tr>
+		<tr>
+			<td align="center">
+				<a href="javascript:void(0)" onclick="popupfunction('4')" class="linktext">
+				<img src="img/rugpull.jpeg" alt="Totally Legit Crypto Opportunity" width="400px"><br>Totally Legit Crytpo Opportunity</a>
+			</td>
+				<div id="popup4" class="white_content">
+					<p align="center">
+						<br><br><img src="img/rugpull.jpeg" alt="a blue shirt" width=30%><br>Totally Legit Crypto Opportunity<br><br>Price: $999 <br>Rating: 5 <br>
+						<a href="javascript:void(0)" onclick="popupclose('4')" class="linktext">Back</a>
+					</p>
+				</div>
+				<div id="fade4" class="black_content"></div>
+		</tr>
+	</table>
+		<p align="center">A JBU Online Store<p>
+	</body>
+</html>
